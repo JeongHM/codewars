@@ -18,10 +18,11 @@
 # [3, 30, 34, 5, 9]	    9534330
 
 def solution(numbers):
-    permutations = sorted(list(itertools.permutations(numbers)))
-    return ''.join(sorted(permutations).pop())
+    if sum(numbers) == 0:
+        return '0'
+    str_numbers = list(map(str, numbers))
+    str_numbers.sort(key=lambda x: x*3, reverse=True)
+    return ''.join(str_numbers)
 
 
-def solution2(numbers):
-    
 solution([3, 30, 34, 5, 9])
