@@ -8,21 +8,18 @@
 
 # Please note that using encode is considered cheating
 
-# def rot13(message):
-#     answer = []
-#     upper_map = {i: i + 13 if i <= 77 else i - 13 for i in range(65, 91)}
-#     lower_map = {i: i + 13 if i <= 109 else i - 13 for i in range(97, 123)}
+def rot13(message):
+    answer = []
+    upper_map = {i: i + 13 if i <= 77 else i - 13 for i in range(65, 91)}
+    lower_map = {i: i + 13 if i <= 109 else i - 13 for i in range(97, 123)}
     
-#     for m in message:
-#         _m = m
-#         if m.islower():
-#             _m = chr(lower_map[ord(m)])
+    for m in message:
+        _m = m
+        if m.islower():
+            _m = chr(lower_map[ord(m)])
 
-#         elif m.isupper():
-#             _m = chr(upper_map[ord(m)])
+        elif m.isupper():
+            _m = chr(upper_map[ord(m)])
         
-#         answer.append(_m)
-#     return ''.join(answer)
-
-a = [1,2,3]
-print(a[4])
+        answer.append(_m)
+    return ''.join(answer)
