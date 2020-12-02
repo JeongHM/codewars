@@ -25,3 +25,8 @@ def solution1(n):
 
 def solution2(n):
     return sum([i for i in list(map(int, str(n)))])
+
+
+# 2020 12 02
+def solution(n: int):
+    return eval("+".join(list(str(n))))
